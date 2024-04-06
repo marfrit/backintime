@@ -432,7 +432,7 @@ class TestTools(generic.TestCase):
         self.assertRegex(tools.filesystem('/sys'), r'sys.*')
         self.assertRegex(
             tools.filesystem('/nonExistingFolder/foo/bar').lower(),
-            r'(:?ext[2-4]|xfs|zfs|jfs|raiserfs|btrfs|tmpfs|overlay|shiftfs)')
+            r'(:?ext[2-4]|xfs|zfs|jfs|raiserfs|f2fs|btrfs|tmpfs|overlay|shiftfs)')
 
     # tools.uuidFromDev() get called from tools.uuidFromPath because the
     # latter is a synonym/surrogate for too.suuidFromDev()
